@@ -212,6 +212,7 @@ public class MainActivity extends AppCompatActivity
                     videoView.setVisibility(VISIBLE);
                     videoView.start();
                     scanAnimation.start();
+                    seekBar.setVisibility(View.VISIBLE);
 
             }
         }
@@ -225,11 +226,15 @@ public class MainActivity extends AppCompatActivity
             videoView.pause();
             scanAnimation.stop();
 
+
             // 停止播放後必須再執行 prepareAsync()
             // 或 prepare() 才能重新播放。
             mbIsInitialised = true;
             mBtnMediaPlayPause.setImageResource(android.R.drawable.ic_media_play);
+            seekBar.setVisibility(View.INVISIBLE);
+
         }
+
     };
 
     private View.OnClickListener btnMediaRepeatOnClick = new View.OnClickListener() {

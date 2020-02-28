@@ -15,5 +15,5 @@ stop後必須再執行 prepareAsync() 或 prepare() 才能重新播放。<br />
 但不可能在seekBar裡放prepareAsync() 或 prepare()<br />
 UX角度思考,音樂都關掉了還可以一直動seekBar也很奇怪<br />
 所以直接讓使用者按下stop鍵時<br />
-讓seekBar.setVisibility(View.VISIBLE);<br />
+讓seekBar.setVisibility(View.INVISIBLE);<br />
 是有一點鴕鳥心態的fu啦Σ( ° △ °|||)<br />
